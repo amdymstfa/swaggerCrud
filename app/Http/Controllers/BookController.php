@@ -4,9 +4,33 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Book;
-
+/**
+ * @OA\Info(
+ *      title="Book Manager API",
+ *      version="1.0",
+ *      description="API Book Manager",
+ * )
+ *
+ * @OA\Tag(
+ *     name="Books",
+ *     description="Mamage books"
+ * )
+ */
 class BookController extends Controller
 {
+/**
+ * @OA\Get(
+ *     path="/api/books",
+ *     summary="Retrieve all books",
+ *     tags={"Books"},
+ *     @OA\Response(
+ *         response=200,
+ *         description="List of books",
+ *         @OA\JsonContent(type="array", @OA\Items(ref="#/components/schemas/Book"))
+ *     )
+ * )
+ */
+
     /**
      * Display a listing of the resource.
      */

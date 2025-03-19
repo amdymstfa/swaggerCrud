@@ -14,7 +14,9 @@ return [
                  */
                 'api' => 'api/documentation',
             ],
+            'generate_always' => true,
             'paths' => [
+                'annotations' => base_path('app'),
                 /*
                  * Edit to include full URL in ui for assets
                  */
